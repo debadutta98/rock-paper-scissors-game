@@ -1,0 +1,78 @@
+@use "config" as *;
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: $font-barlow;
+    background: $bg-color;
+    background-repeat: no-repeat;
+}
+header{
+    display: flex;
+    justify-content: center;
+    .score-card{
+    padding: 1rem;
+    gap:1rem;
+    display: flex;
+    border-radius: 5px;
+    width: 50vw;
+    height:max-content;
+    margin:2rem 0rem;
+    outline:2px solid $header-outline;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-items: center;
+    &__game-name{
+        width: min-content;
+        font-weight: bold;
+        color: white;
+        font-size: 2.5rem;
+        line-height:1.9rem;
+        margin-right:auto;
+    }
+
+    &__score{
+        background-color: white;
+        border-radius: inherit;
+        padding:1rem 2.5rem;
+        text-align: center;
+        span{
+            display: block;
+        }
+        &__title{
+            color:$score-text;
+            letter-spacing: 5px;
+        }
+        &__points{
+            color: $dark-text;
+            font-size: 3rem;
+        }
+    }
+    @include makeit(702px){
+        width: 80vw;
+    }
+    @include makeit(502px){
+        width: 90vw;
+    }
+    @include makeit(392px){
+         &__game-name{
+            font-size:1.5rem;
+            line-height:1.2rem;
+         }&__score{
+            padding:1rem 1.5rem;
+            &__title{
+            font-size: 0.5rem;
+            letter-spacing: 3px;
+            }
+            &__points{
+                font-size: 2rem;
+            }
+         }
+    }
+}
+}

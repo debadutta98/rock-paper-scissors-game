@@ -1,1 +1,89 @@
-/*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Barlow Semi Condensed;
+  background: radial-gradient(circle, rgb(31, 55, 86) 13%, rgb(20, 21, 57) 100%);
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header .score-card {
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  border-radius: 5px;
+  width: 50vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 2rem 0rem;
+  outline: 2px solid hsl(217deg, 16%, 45%);
+  text-transform: uppercase;
+  font-weight: bold;
+  align-items: center;
+}
+header .score-card__game-name {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-weight: bold;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1.9rem;
+  margin-right: auto;
+}
+header .score-card__score {
+  background-color: white;
+  border-radius: inherit;
+  padding: 1rem 2.5rem;
+  text-align: center;
+}
+header .score-card__score span {
+  display: block;
+}
+header .score-card__score__title {
+  color: hsl(229deg, 64%, 46%);
+  letter-spacing: 5px;
+}
+header .score-card__score__points {
+  color: hsl(229deg, 25%, 31%);
+  font-size: 3rem;
+}
+@media screen and (max-width: 702px) {
+  header .score-card {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 502px) {
+  header .score-card {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 392px) {
+  header .score-card__game-name {
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+  header .score-card__score {
+    padding: 1rem 1.5rem;
+  }
+  header .score-card__score__title {
+    font-size: 0.5rem;
+    letter-spacing: 3px;
+  }
+  header .score-card__score__points {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=index.css.map */

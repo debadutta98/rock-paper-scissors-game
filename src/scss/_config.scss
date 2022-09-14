@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//gradients
+$scissors-gradient:linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+$paper-gradient:linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+$rock-gradient:linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+$lizard-gradient:linear-gradient(hsl(261, 73%, 60%),hsl(261, 72%, 63%));
+$spock-gradient:linear-gradient(hsl(189, 59%, 53%),hsl(189, 58%, 57%));
+
+//colors
+$dark-text:hsl(229, 25%, 31%);
+$score-text:hsl(229, 64%, 46%);
+$header-outline:hsl(217, 16%, 45%);
+
+//background colors:
+
+$bg-color:radial-gradient(circle, rgba(31,55,86,1) 13%, rgba(20,21,57,1) 100%);
+
+//font
+
+$font-barlow:Barlow Semi Condensed;
+
+@mixin makeit($width) {
+    @media screen and (max-width:$width) {
+        @content;
+    }
+}
+
