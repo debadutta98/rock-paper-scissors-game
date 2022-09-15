@@ -1,78 +1,170 @@
 @use "config" as *;
-*{
+* {
     margin: 0px;
-    padding:0px;
+    padding: 0px;
     box-sizing: border-box;
 }
-html,body{
-    height: 100%;
+
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
 }
-body{
+
+body {
     font-family: $font-barlow;
     background: $bg-color;
     background-repeat: no-repeat;
 }
-header{
+header {
     display: flex;
     justify-content: center;
-    .score-card{
-    padding: 1rem;
-    gap:1rem;
-    display: flex;
-    border-radius: 5px;
-    width: 50vw;
-    height:max-content;
-    margin:2rem 0rem;
-    outline:2px solid $header-outline;
-    text-transform: uppercase;
-    font-weight: bold;
-    align-items: center;
-    &__game-name{
-        width: min-content;
+    .score-card {
+        padding: 1rem;
+        gap: 1rem;
+        display: flex;
+        border-radius: 5px;
+        width: 50vw;
+        height: max-content;
+        margin: 2rem 0rem;
+        outline: 2px solid $header-outline;
+        text-transform: uppercase;
         font-weight: bold;
-        color: white;
-        font-size: 2.5rem;
-        line-height:1.9rem;
-        margin-right:auto;
-    }
+        align-items: center;
+        img {
+            margin-right: auto;
+            max-width: 100%;
+        }
 
-    &__score{
-        background-color: white;
-        border-radius: inherit;
-        padding:1rem 2.5rem;
-        text-align: center;
-        span{
-            display: block;
-        }
-        &__title{
-            color:$score-text;
-            letter-spacing: 5px;
-        }
-        &__points{
-            color: $dark-text;
-            font-size: 3rem;
-        }
-    }
-    @include makeit(702px){
-        width: 80vw;
-    }
-    @include makeit(502px){
-        width: 90vw;
-    }
-    @include makeit(392px){
-         &__game-name{
-            font-size:1.5rem;
-            line-height:1.2rem;
-         }&__score{
-            padding:1rem 1.5rem;
-            &__title{
-            font-size: 0.5rem;
-            letter-spacing: 3px;
+        &__score {
+            background-color: white;
+            border-radius: inherit;
+            padding: 1rem 2.5rem;
+            text-align: center;
+            span {
+                display: block;
             }
-            &__points{
-                font-size: 2rem;
+            &__title {
+                color: $score-text;
+                letter-spacing: 5px;
             }
-         }
+            &__points {
+                color: $dark-text;
+                font-size: 3rem;
+                opacity: 0.9;
+            }
+        }
+        @include makeit(702px) {
+            width: 80vw;
+        }
+        @include makeit(502px) {
+            width: 90vw;
+        }
+        @include makeit(392px) {
+            img {
+                width: 8rem;
+            }
+            &__score {
+                padding: 1rem 1.5rem;
+                &__title {
+                    font-size: 0.5rem;
+                    letter-spacing: 3px;
+                }
+                &__points {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 }
+//main
+main {
+    .container-step1 {
+        display: flex;
+        justify-content: center;
+        row-gap: 3rem;
+        margin: 2rem;
+        column-gap: 5rem;
+        background-image: url(../images/bg-triangle.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 29rem;
+        padding: 1rem;
+        background-size: 50%;
+        @include makeit(463.5px) {
+            width: 100vw;
+        }
+        @include circle {
+            @include makeit(463.5px) {
+                &__game-component {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                }
+            }
+            @include makeit(426.5px) {
+                &__game-component {
+                    width: 5rem;
+                    height: 5rem;
+                    img {
+                        width: 2rem;
+                    }
+                }
+                padding: 0.8rem;
+            }
+            @include makeit(335.5px) {
+                &__game-component {
+                    width: 4rem;
+                    height: 4rem;
+                }
+                padding: 0.7rem;
+            }
+        }
+    }
+    .container-step2 {
+        display: flex;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        span {
+            display: block;
+            color: white;
+            font-size: 1vw;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        @include circle{
+            @include makeit(431.5px){
+                &__game-component {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                }
+                width: fit-content;
+            }
+        }
+    }
+}
+//footer
+footer {
+    display: flex;
+    padding: 1.5rem;
+    .rules-button {
+        margin-left: auto;
+        border: 2px solid $header-outline;
+        border-radius: 5px;
+        padding: 0.5rem 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        background-color: inherit;
+        color: white;
+        cursor: pointer;
+        @include makeit(640px) {
+            margin-right: auto;
+        }
+    }
 }

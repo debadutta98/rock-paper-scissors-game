@@ -1,8 +1,14 @@
+import Main from "./components/Main";
 import Scoreborad from "./components/Scoreboard";
 
 function App() {
-  return (
+  return (<>
     <Scoreborad/>
+    <Main/>
+    <footer>
+      <button className="rules-button">Rules</button>
+    </footer>
+  </>
   );
 }
 

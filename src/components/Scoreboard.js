@@ -1,6 +1,6 @@
 const Scoreborad=()=>{
     return <header><div className="score-card">
-        <h1 className="score-card__game-name">Rock Paper Scissors</h1>
+        <img src={require("../images/logo.svg").default} alt="rocke paper scissors"/>
         <div className="score-card__score">
             <span className="score-card__score__title">Score</span>
             <span className="score-card__score__points">12</span>
