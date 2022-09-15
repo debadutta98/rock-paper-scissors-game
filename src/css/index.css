@@ -117,6 +117,9 @@ main .container-step1 .scissors {
   background: linear-gradient(hsl(39deg, 89%, 49%), hsl(40deg, 84%, 53%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step1 .scissors__game-component {
   background-color: white;
@@ -164,6 +167,9 @@ main .container-step1 .paper {
   background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step1 .paper__game-component {
   background-color: white;
@@ -211,6 +217,9 @@ main .container-step1 .rock {
   background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step1 .rock__game-component {
   background-color: white;
@@ -258,6 +267,9 @@ main .container-step1 .lizard {
   background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step1 .lizard__game-component {
   background-color: white;
@@ -305,6 +317,9 @@ main .container-step1 .spock {
   background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step1 .spock__game-component {
   background-color: white;
@@ -355,20 +370,37 @@ main .container-step2 {
   align-items: center;
   margin: 2rem;
 }
-main .container-step2 span {
+main .container-step2__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .container-step2__col span {
   display: block;
   color: white;
-  font-size: 1vw;
+  font-size: 1rem;
+  white-space: nowrap;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 3rem;
   text-align: center;
+}
+@media screen and (max-width: 640px) {
+  main .container-step2__col {
+    flex-direction: column-reverse;
+  }
+  main .container-step2__col span {
+    font-size: 3.5vw;
+  }
 }
 main .container-step2 .scissors {
   background: linear-gradient(hsl(39deg, 89%, 49%), hsl(40deg, 84%, 53%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step2 .scissors__game-component {
   background-color: white;
@@ -376,7 +408,7 @@ main .container-step2 .scissors__game-component {
   width: 9rem;
   height: 9rem;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 main .container-step2 .scissors__game-component img {
   max-width: 100%;
@@ -385,21 +417,40 @@ main .container-step2 .scissors__game-component img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 431.5px) {
-  main .container-step2 .scissors {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
+@media screen and (max-width: 463.5px) {
   main .container-step2 .scissors__game-component {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step2 .scissors {
+    padding: 0.8rem;
+  }
+  main .container-step2 .scissors__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step2 .scissors__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step2 .scissors {
+    padding: 0.7rem;
+  }
+  main .container-step2 .scissors__game-component {
+    width: 4rem;
+    height: 4rem;
   }
 }
 main .container-step2 .paper {
   background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step2 .paper__game-component {
   background-color: white;
@@ -407,7 +458,7 @@ main .container-step2 .paper__game-component {
   width: 9rem;
   height: 9rem;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 main .container-step2 .paper__game-component img {
   max-width: 100%;
@@ -416,21 +467,40 @@ main .container-step2 .paper__game-component img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 431.5px) {
-  main .container-step2 .paper {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
+@media screen and (max-width: 463.5px) {
   main .container-step2 .paper__game-component {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step2 .paper {
+    padding: 0.8rem;
+  }
+  main .container-step2 .paper__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step2 .paper__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step2 .paper {
+    padding: 0.7rem;
+  }
+  main .container-step2 .paper__game-component {
+    width: 4rem;
+    height: 4rem;
   }
 }
 main .container-step2 .rock {
   background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step2 .rock__game-component {
   background-color: white;
@@ -438,7 +508,7 @@ main .container-step2 .rock__game-component {
   width: 9rem;
   height: 9rem;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 main .container-step2 .rock__game-component img {
   max-width: 100%;
@@ -447,21 +517,40 @@ main .container-step2 .rock__game-component img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 431.5px) {
-  main .container-step2 .rock {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
+@media screen and (max-width: 463.5px) {
   main .container-step2 .rock__game-component {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step2 .rock {
+    padding: 0.8rem;
+  }
+  main .container-step2 .rock__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step2 .rock__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step2 .rock {
+    padding: 0.7rem;
+  }
+  main .container-step2 .rock__game-component {
+    width: 4rem;
+    height: 4rem;
   }
 }
 main .container-step2 .lizard {
   background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step2 .lizard__game-component {
   background-color: white;
@@ -469,7 +558,7 @@ main .container-step2 .lizard__game-component {
   width: 9rem;
   height: 9rem;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 main .container-step2 .lizard__game-component img {
   max-width: 100%;
@@ -478,21 +567,40 @@ main .container-step2 .lizard__game-component img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 431.5px) {
-  main .container-step2 .lizard {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
+@media screen and (max-width: 463.5px) {
   main .container-step2 .lizard__game-component {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step2 .lizard {
+    padding: 0.8rem;
+  }
+  main .container-step2 .lizard__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step2 .lizard__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step2 .lizard {
+    padding: 0.7rem;
+  }
+  main .container-step2 .lizard__game-component {
+    width: 4rem;
+    height: 4rem;
   }
 }
 main .container-step2 .spock {
   background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
   padding: 1rem;
   border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 main .container-step2 .spock__game-component {
   background-color: white;
@@ -500,7 +608,7 @@ main .container-step2 .spock__game-component {
   width: 9rem;
   height: 9rem;
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 main .container-step2 .spock__game-component img {
   max-width: 100%;
@@ -509,15 +617,70 @@ main .container-step2 .spock__game-component img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 431.5px) {
-  main .container-step2 .spock {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
+@media screen and (max-width: 463.5px) {
   main .container-step2 .spock__game-component {
     width: 6.5rem;
     height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step2 .spock {
+    padding: 0.8rem;
+  }
+  main .container-step2 .spock__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step2 .spock__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step2 .spock {
+    padding: 0.7rem;
+  }
+  main .container-step2 .spock__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.placeholder {
+  padding: 1rem;
+  position: relative;
+}
+.placeholder__img {
+  background-color: rgb(20, 21, 57);
+  opacity: 0.4;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+}
+@media screen and (max-width: 463.5px) {
+  .placeholder__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  .placeholder {
+    padding: 0.8rem;
+  }
+  .placeholder__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  .placeholder__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  .placeholder {
+    padding: 0.7rem;
+  }
+  .placeholder__game-component {
+    width: 4rem;
+    height: 4rem;
   }
 }
 

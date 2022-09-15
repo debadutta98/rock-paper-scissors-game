@@ -96,31 +96,7 @@ main {
         @include makeit(463.5px) {
             width: 100vw;
         }
-        @include circle {
-            @include makeit(463.5px) {
-                &__game-component {
-                    width: 6.5rem;
-                    height: 6.5rem;
-                }
-            }
-            @include makeit(426.5px) {
-                &__game-component {
-                    width: 5rem;
-                    height: 5rem;
-                    img {
-                        width: 2rem;
-                    }
-                }
-                padding: 0.8rem;
-            }
-            @include makeit(335.5px) {
-                &__game-component {
-                    width: 4rem;
-                    height: 4rem;
-                }
-                padding: 0.7rem;
-            }
-        }
+        @include circle(pointer);
     }
     .container-step2 {
         display: flex;
@@ -128,25 +104,63 @@ main {
         justify-content: center;
         align-items: center;
         margin: 2rem;
-        span {
-            display: block;
-            color: white;
-            font-size: 1vw;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        @include circle{
-            @include makeit(431.5px){
-                &__game-component {
-                    width: 6.5rem;
-                    height: 6.5rem;
+        &__col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            span {
+                display: block;
+                color: white;
+                font-size: clamp(0.7rem, 1rem, 1.5rem);
+                white-space: nowrap;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: bold;
+                text-align: center;
+            }
+            @include makeit(640px) {
+                flex-direction: column-reverse;
+                span {
+                    font-size: clamp(3vw, 3.5vw, 4vw);
                 }
-                width: fit-content;
             }
         }
+        @include circle(auto);
+    }
+}
+.placeholder {
+    padding: 1rem;
+    position:relative;
+    &__img {
+        background-color: rgba(20, 21, 57, 1);
+        opacity: 0.4;
+        border-radius: 100%;
+        width: 9rem;
+        height: 9rem;
+    }
+    @include makeit(463.5px) {
+        &__game-component {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+    }
+    @include makeit(426.5px) {
+        &__game-component {
+            width: 5rem;
+            height: 5rem;
+            img {
+                width: 2rem;
+            }
+        }
+        padding: 0.8rem;
+    }
+    @include makeit(335.5px) {
+        &__game-component {
+            width: 4rem;
+            height: 4rem;
+        }
+        padding: 0.7rem;
     }
 }
 //footer

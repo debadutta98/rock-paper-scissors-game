@@ -8,7 +8,7 @@ const Step2=()=>{
         </div>
         <div className="container-step2__col">
             <span>the house picked</span>
-            <Circle name="rock" />
+            <Circle/>
         </div>
     </div>
 }
