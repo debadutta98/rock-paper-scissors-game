@@ -194,6 +194,7 @@ main {
             bottom: 0px;
             right: 0px;
             left: 0px;
+            transform: scale(0);
             margin: auto;
             animation-name: scaling;
             animation-timing-function: linear;
@@ -304,6 +305,14 @@ main {
         border-radius: 100%;
         width: 9rem;
         height: 9rem;
+        animation-name: scaling;
+        animation-timing-function: linear;
+        animation-duration: 800ms;
+        animation-delay: 100ms;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
     }
     @include makeit(463.5px) {
         &__img {

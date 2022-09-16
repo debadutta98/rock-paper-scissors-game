@@ -42,7 +42,7 @@ const Img = (props) => {
 const Circle = (props) => {
   return (
       <div className={`${props.name} ${props.className || ""}`}>
-      <div className={`${props.name}__game-component`}>
+      <div className={`${props.name}__game-component`} onClick={props.onClick?props.onClick:null}>
         <Img name={props.name} />
       </div>
     </div>

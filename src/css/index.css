@@ -700,6 +700,7 @@ main .container-step2 .scissors {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  transform: scale(0);
   margin: auto;
   -webkit-animation-name: scaling;
           animation-name: scaling;
@@ -785,6 +786,7 @@ main .container-step2 .paper {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  transform: scale(0);
   margin: auto;
   -webkit-animation-name: scaling;
           animation-name: scaling;
@@ -870,6 +872,7 @@ main .container-step2 .rock {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  transform: scale(0);
   margin: auto;
   -webkit-animation-name: scaling;
           animation-name: scaling;
@@ -955,6 +958,7 @@ main .container-step2 .lizard {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  transform: scale(0);
   margin: auto;
   -webkit-animation-name: scaling;
           animation-name: scaling;
@@ -1040,6 +1044,7 @@ main .container-step2 .spock {
   bottom: 0px;
   right: 0px;
   left: 0px;
+  transform: scale(0);
   margin: auto;
   -webkit-animation-name: scaling;
           animation-name: scaling;
@@ -1616,6 +1621,22 @@ main .container-step3 .spock__game-component img {
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 @media screen and (max-width: 463.5px) {
   .placeholder__img {
