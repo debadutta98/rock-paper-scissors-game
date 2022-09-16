@@ -41,7 +41,7 @@ const Img = (props) => {
 };
 const Circle = (props) => {
   return (
-    <div className={props.name}>
+      <div className={`${props.name} ${props.className || ""}`}>
       <div className={`${props.name}__game-component`}>
         <Img name={props.name} />
       </div>

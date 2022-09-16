@@ -1,10 +1,11 @@
+import React from "react";
 import Circle from "../Circle";
 
-const Step3=()=>{
-    return <div className="container-step3">
+const Step3=(props)=>{
+    return <div className={`container-step3 ${props.className}`}>
         <div className="container-step3__col">
             <span>You picked</span>
-                <Circle name="rock"/>
+                <Circle name="rock" className={"win"}/>
         </div>
         <div className="container-step3__col-mid">
             <span>You Win</span>
@@ -16,4 +17,4 @@ const Step3=()=>{
         </div>
     </div>;
 };
-export default Step3;
+export default React.memo(Step3);

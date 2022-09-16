@@ -1,3 +1,4 @@
+import React from "react";
 import Circle from "../Circle";
 
 const Step2=(props)=>{
@@ -20,4 +21,4 @@ const Step2=(props)=>{
         </div>
     </div>
 }
-export default Step2;
+export default React.memo(Step2);

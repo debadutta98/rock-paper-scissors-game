@@ -1,3 +1,4 @@
+@use "sass:color";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 //gradients
 $border-colors: (
@@ -6,6 +7,13 @@ $border-colors: (
     "rock": linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%)),
     "lizard": linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%)),
     "spock": linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%)),
+);
+$boxshadow-colors: (
+    "scissors": hsl(40, 84%, 53%),
+    "paper": hsl(230, 89%, 65%),
+    "rock": hsl(349, 70%, 56%),
+    "lizard": hsl(261, 72%, 63%),
+    "spock": hsl(189, 58%, 57%),
 );
 //colors
 $dark-text: hsl(229, 25%, 31%);
@@ -25,16 +33,22 @@ $font-barlow: Barlow Semi Condensed;
         @content;
     }
 }
-@mixin circle($cursor-type) {
+@mixin circle($cursor-type, $pass) {
     @each $class, $color in $border-colors {
         .#{$class} {
-            @content;
+            @if ($pass) {
+                @content ($class);
+            } @else {
+                @content;
+            }
             background: $color;
             padding: 1rem;
             border-radius: 100%;
             width: min-content;
+            box-shadow: inset -2px -6px darken(map-get($map: $boxshadow-colors, $key: $class), 20%);
             &__game-component {
                 background-color: white;
+                box-shadow: inset 2px 5px lighten($header-outline, 20%);
                 border-radius: 100%;
                 width: 9rem;
                 height: 9rem;
@@ -72,6 +86,21 @@ $font-barlow: Barlow Semi Condensed;
                 padding: 0.7rem;
             }
         }
+        @keyframes shadow-animation-#{$class} {
+            20% {
+                box-shadow: inset -2px -6px darken(map-get($map: $boxshadow-colors, $key: $class), 20%),
+                    0px 0px 5px 50px rgb(60 82 101 / 15%);
+            }
+            50% {
+                box-shadow: inset -2px -6px darken(map-get($map: $boxshadow-colors, $key: $class), 20%),
+                    0px 0px 5px 50px rgb(60 82 101 / 15%), 0px 0px 5px 100px rgb(60 82 101 / 15%);
+            }
+            100% {
+                box-shadow: inset -2px -6px darken(map-get($map: $boxshadow-colors, $key: $class), 20%),
+                    0px 0px 5px 50px rgb(60 82 101 / 15%), 0px 0px 5px 100px rgb(60 82 101 / 15%),
+                    0px 0px 5px 150px rgb(60 82 101 / 15%);
+            }
+        }
     }
 }
 .hidden {
@@ -81,6 +110,8 @@ $font-barlow: Barlow Semi Condensed;
     display: flex !important;
 }
 
+
+//keyframe animation
 @keyframes scaling {
     0% {
         transform: scale(0.2);
@@ -118,7 +149,7 @@ $font-barlow: Barlow Semi Condensed;
     }
 }
 
-@keyframes rotate{
+@keyframes rotate {
     0% {
         transform: scale(0.2) rotate(180deg);
     }

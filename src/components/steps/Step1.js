@@ -1,7 +1,7 @@
+import React from "react";
 import Circle from "../Circle";
 const game = ["paper", "scissors", "rock"]
 const Step1=(props)=>{
-    console.log(props.className);
     return <div className={`container-step1 ${props.className}`}>
     {
         game.map((value,index)=>{
@@ -10,4 +10,4 @@ const Step1=(props)=>{
     }
 </div>
 };
-export default Step1;
+export default React.memo(Step1);

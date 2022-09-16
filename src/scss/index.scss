@@ -17,55 +17,55 @@ body {
     background-repeat: no-repeat;
 }
 //overlay
-.overlay-backdrop{
-    min-width:100%;
+.overlay-backdrop {
+    min-width: 100%;
     min-height: 100%;
-    background-color: rgba(0,0,0,.4);;
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     z-index: 10;
 }
-.modal{
+.modal {
     background-color: white;
     position: absolute;
     z-index: 20;
     width: max-content;
     padding: 1.5rem;
-    top:-25rem;
+    top: -25rem;
     bottom: auto;
     right: 0%;
     left: 0%;
     margin: auto;
     border-radius: 5px;
-    &__header{
+    &__header {
         text-transform: uppercase;
         display: flex;
         align-items: center;
-        h2{
+        h2 {
             margin-right: auto;
         }
-        &__img-container{
+        &__img-container {
             cursor: pointer;
-            img{
+            img {
                 vertical-align: middle;
             }
         }
     }
-    & > img{
-        margin-top:1rem;
-        @include makeit(352px){
-            width:80vw;
+    & > img {
+        margin-top: 1rem;
+        @include makeit(352px) {
+            width: 80vw;
         }
     }
-     animation-name: drop;
-            animation-timing-function: linear;
-            animation-duration: 800ms;
-            animation-delay: 200ms;
-            animation-iteration-count: 1;
-            animation-play-state: running;
-            animation-fill-mode:both;
-            animation-direction: alternate;
+    animation-name: drop;
+    animation-timing-function: linear;
+    animation-duration: 800ms;
+    animation-delay: 200ms;
+    animation-iteration-count: 1;
+    animation-play-state: running;
+    animation-fill-mode: both;
+    animation-direction: alternate;
 }
-#root{
+#root {
     position: relative;
     z-index: 5;
 }
@@ -158,7 +158,7 @@ main {
         @include makeit(463.5px) {
             width: 100vw;
         }
-        @include circle(pointer);
+        @include circle(pointer, $pass: false);
     }
     .container-step2 {
         display: flex;
@@ -188,12 +188,12 @@ main {
                 }
             }
         }
-        @include circle(auto){
+        @include circle(auto, $pass: false) {
             position: absolute;
-            top:0px;
-            bottom:0px;
+            top: 0px;
+            bottom: 0px;
             right: 0px;
-            left:0px;
+            left: 0px;
             margin: auto;
             animation-name: scaling;
             animation-timing-function: linear;
@@ -203,17 +203,16 @@ main {
             animation-play-state: running;
             animation-fill-mode: forwards;
             animation-direction: alternate;
-
-        };
+        }
     }
-    .container-step3{
-        
+    .container-step3 {
         display: flex;
+        margin: 2rem;
         justify-content: center;
-        gap:4rem;
+        gap: 4rem;
         text-transform: uppercase;
         color: white;
-        span{
+        span {
             font-weight: bold;
         }
         &__col {
@@ -236,39 +235,64 @@ main {
                 }
             }
         }
-        &__col-mid{
-            margin:auto 0rem;
-            span{
+        &__col-mid {
+            margin: auto 0rem;
+            span {
                 display: block;
-                font-size:clamp(2rem , 2.5rem, 3rem);
+                font-size: clamp(2rem, 2.5rem, 3rem);
                 text-align: center;
-                
             }
-            button{
-                margin-top:1rem;
+            button {
+                margin-top: 1rem;
                 width: 100%;
                 padding: 0.5rem 2rem;
                 border-radius: 5px;
                 border: none;
                 outline: none;
-                white-space:nowrap;
+                white-space: nowrap;
+                font-family: inherit;
                 text-transform: inherit;
                 color: $dark-text;
                 font-weight: 550;
                 letter-spacing: 2px;
                 cursor: pointer;
             }
-            @include makeit(644px){
-                span{
-                    font-size:1.5rem;
-                }button{
+            @include makeit(644px) {
+                span {
+                    font-size: 1.5rem;
+                }
+                button {
                     padding: 0.5rem 1rem;
                 }
             }
         }
-        @include circle(auto){
-            
-        };
+        @include circle(auto, $pass: true) using ($class) {
+            &.win {
+                animation-name: shadow-animation-#{$class};
+                animation-timing-function: ease;
+                animation-duration: 1s;
+                animation-delay: 100ms;
+                animation-iteration-count: infinite;
+                animation-play-state: running;
+                animation-fill-mode: forwards;
+                animation-direction: alternate;
+            }
+        }
+        @include makeit(640px) {
+            position: relative;
+            height: 50vw;
+            margin-bottom: 9rem;
+            &__col-mid {
+                position: absolute;
+                bottom: -8rem;
+                span {
+                    font-size: clamp(2rem, 2.5rem, 3rem);
+                }
+                button {
+                    padding: 0.5rem 2rem;
+                }
+            }
+        }
     }
 }
 .placeholder {
@@ -316,6 +340,7 @@ footer {
         background-color: inherit;
         color: white;
         cursor: pointer;
+        font-family: inherit;
         @include makeit(640px) {
             margin-right: auto;
         }

@@ -300,9 +300,11 @@ main .container-step1 .scissors {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9b6c0d;
 }
 main .container-step1 .scissors__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -343,6 +345,28 @@ main .container-step1 .scissors__game-component img {
     height: 4rem;
   }
 }
+@-webkit-keyframes shadow-animation-scissors {
+  20% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@keyframes shadow-animation-scissors {
+  20% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step1 .paper {
   background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
   padding: 1rem;
@@ -350,9 +374,11 @@ main .container-step1 .paper {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #0d2fd9;
 }
 main .container-step1 .paper__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -393,6 +419,28 @@ main .container-step1 .paper__game-component img {
     height: 4rem;
   }
 }
+@-webkit-keyframes shadow-animation-paper {
+  20% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@keyframes shadow-animation-paper {
+  20% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step1 .rock {
   background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
   padding: 1rem;
@@ -400,9 +448,11 @@ main .container-step1 .rock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9c1c33;
 }
 main .container-step1 .rock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -443,6 +493,28 @@ main .container-step1 .rock__game-component img {
     height: 4rem;
   }
 }
+@-webkit-keyframes shadow-animation-rock {
+  20% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@keyframes shadow-animation-rock {
+  20% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step1 .lizard {
   background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
   padding: 1rem;
@@ -450,9 +522,11 @@ main .container-step1 .lizard {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #561fbd;
 }
 main .container-step1 .lizard__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -493,6 +567,28 @@ main .container-step1 .lizard__game-component img {
     height: 4rem;
   }
 }
+@-webkit-keyframes shadow-animation-lizard {
+  20% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@keyframes shadow-animation-lizard {
+  20% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step1 .spock {
   background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
   padding: 1rem;
@@ -500,9 +596,11 @@ main .container-step1 .spock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #288595;
 }
 main .container-step1 .spock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -541,6 +639,28 @@ main .container-step1 .spock__game-component img {
   main .container-step1 .spock__game-component {
     width: 4rem;
     height: 4rem;
+  }
+}
+@-webkit-keyframes shadow-animation-spock {
+  20% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@keyframes shadow-animation-spock {
+  20% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
   }
 }
 main .container-step2 {
@@ -603,9 +723,11 @@ main .container-step2 .scissors {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9b6c0d;
 }
 main .container-step2 .scissors__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -646,6 +768,17 @@ main .container-step2 .scissors__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-scissors {
+  20% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step2 .paper {
   position: absolute;
   top: 0px;
@@ -675,9 +808,11 @@ main .container-step2 .paper {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #0d2fd9;
 }
 main .container-step2 .paper__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -718,6 +853,17 @@ main .container-step2 .paper__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-paper {
+  20% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step2 .rock {
   position: absolute;
   top: 0px;
@@ -747,9 +893,11 @@ main .container-step2 .rock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9c1c33;
 }
 main .container-step2 .rock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -790,6 +938,17 @@ main .container-step2 .rock__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-rock {
+  20% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step2 .lizard {
   position: absolute;
   top: 0px;
@@ -819,9 +978,11 @@ main .container-step2 .lizard {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #561fbd;
 }
 main .container-step2 .lizard__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -862,6 +1023,17 @@ main .container-step2 .lizard__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-lizard {
+  20% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step2 .spock {
   position: absolute;
   top: 0px;
@@ -891,9 +1063,11 @@ main .container-step2 .spock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #288595;
 }
 main .container-step2 .spock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -934,8 +1108,20 @@ main .container-step2 .spock__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-spock {
+  20% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step3 {
   display: flex;
+  margin: 2rem;
   justify-content: center;
   gap: 4rem;
   text-transform: uppercase;
@@ -982,6 +1168,7 @@ main .container-step3__col-mid button {
   border: none;
   outline: none;
   white-space: nowrap;
+  font-family: inherit;
   text-transform: inherit;
   color: hsl(229deg, 25%, 31%);
   font-weight: 550;
@@ -1003,9 +1190,29 @@ main .container-step3 .scissors {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9b6c0d;
+}
+main .container-step3 .scissors.win {
+  -webkit-animation-name: shadow-animation-scissors;
+          animation-name: shadow-animation-scissors;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 main .container-step3 .scissors__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -1046,6 +1253,17 @@ main .container-step3 .scissors__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-scissors {
+  20% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9b6c0d, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step3 .paper {
   background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
   padding: 1rem;
@@ -1053,9 +1271,29 @@ main .container-step3 .paper {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #0d2fd9;
+}
+main .container-step3 .paper.win {
+  -webkit-animation-name: shadow-animation-paper;
+          animation-name: shadow-animation-paper;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 main .container-step3 .paper__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -1096,6 +1334,17 @@ main .container-step3 .paper__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-paper {
+  20% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #0d2fd9, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step3 .rock {
   background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
   padding: 1rem;
@@ -1103,9 +1352,29 @@ main .container-step3 .rock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #9c1c33;
+}
+main .container-step3 .rock.win {
+  -webkit-animation-name: shadow-animation-rock;
+          animation-name: shadow-animation-rock;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 main .container-step3 .rock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -1146,6 +1415,17 @@ main .container-step3 .rock__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-rock {
+  20% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #9c1c33, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step3 .lizard {
   background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
   padding: 1rem;
@@ -1153,9 +1433,29 @@ main .container-step3 .lizard {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #561fbd;
+}
+main .container-step3 .lizard.win {
+  -webkit-animation-name: shadow-animation-lizard;
+          animation-name: shadow-animation-lizard;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 main .container-step3 .lizard__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -1196,6 +1496,17 @@ main .container-step3 .lizard__game-component img {
     height: 4rem;
   }
 }
+@keyframes shadow-animation-lizard {
+  20% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #561fbd, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
 main .container-step3 .spock {
   background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
   padding: 1rem;
@@ -1203,9 +1514,29 @@ main .container-step3 .spock {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  box-shadow: inset -2px -6px #288595;
+}
+main .container-step3 .spock.win {
+  -webkit-animation-name: shadow-animation-spock;
+          animation-name: shadow-animation-spock;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 main .container-step3 .spock__game-component {
   background-color: white;
+  box-shadow: inset 2px 5px #97a2b4;
   border-radius: 100%;
   width: 9rem;
   height: 9rem;
@@ -1244,6 +1575,34 @@ main .container-step3 .spock__game-component img {
   main .container-step3 .spock__game-component {
     width: 4rem;
     height: 4rem;
+  }
+}
+@keyframes shadow-animation-spock {
+  20% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15);
+  }
+  50% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15);
+  }
+  100% {
+    box-shadow: inset -2px -6px #288595, 0px 0px 5px 50px rgba(60, 82, 101, 0.15), 0px 0px 5px 100px rgba(60, 82, 101, 0.15), 0px 0px 5px 150px rgba(60, 82, 101, 0.15);
+  }
+}
+@media screen and (max-width: 640px) {
+  main .container-step3 {
+    position: relative;
+    height: 50vw;
+    margin-bottom: 9rem;
+  }
+  main .container-step3__col-mid {
+    position: absolute;
+    bottom: -8rem;
+  }
+  main .container-step3__col-mid span {
+    font-size: 2.5rem;
+  }
+  main .container-step3__col-mid button {
+    padding: 0.5rem 2rem;
   }
 }
 
@@ -1297,6 +1656,7 @@ footer .rules-button {
   background-color: inherit;
   color: white;
   cursor: pointer;
+  font-family: inherit;
 }
 @media screen and (max-width: 640px) {
   footer .rules-button {
