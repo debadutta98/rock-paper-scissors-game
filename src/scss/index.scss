@@ -16,6 +16,60 @@ body {
     background: $bg-color;
     background-repeat: no-repeat;
 }
+//overlay
+.overlay-backdrop{
+    min-width:100%;
+    min-height: 100%;
+    background-color: rgba(0,0,0,.4);;
+    position: fixed;
+    z-index: 10;
+}
+.modal{
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    width: max-content;
+    padding: 1.5rem;
+    top:-25rem;
+    bottom: auto;
+    right: 0%;
+    left: 0%;
+    margin: auto;
+    border-radius: 5px;
+    &__header{
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        h2{
+            margin-right: auto;
+        }
+        &__img-container{
+            cursor: pointer;
+            img{
+                vertical-align: middle;
+            }
+        }
+    }
+    & > img{
+        margin-top:1rem;
+        @include makeit(352px){
+            width:80vw;
+        }
+    }
+     animation-name: drop;
+            animation-timing-function: linear;
+            animation-duration: 800ms;
+            animation-delay: 200ms;
+            animation-iteration-count: 1;
+            animation-play-state: running;
+            animation-fill-mode:both;
+            animation-direction: alternate;
+}
+#root{
+    position: relative;
+    z-index: 5;
+}
+//header
 header {
     display: flex;
     justify-content: center;
@@ -93,6 +147,14 @@ main {
         width: 29rem;
         padding: 1rem;
         background-size: 50%;
+        animation-name: rotate;
+        animation-timing-function: linear;
+        animation-duration: 800ms;
+        animation-delay: 100ms;
+        animation-iteration-count: 1;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
         @include makeit(463.5px) {
             width: 100vw;
         }
@@ -126,12 +188,92 @@ main {
                 }
             }
         }
-        @include circle(auto);
+        @include circle(auto){
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            right: 0px;
+            left:0px;
+            margin: auto;
+            animation-name: scaling;
+            animation-timing-function: linear;
+            animation-duration: 800ms;
+            animation-delay: 100ms;
+            animation-iteration-count: 1;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+
+        };
+    }
+    .container-step3{
+        
+        display: flex;
+        justify-content: center;
+        gap:4rem;
+        text-transform: uppercase;
+        color: white;
+        span{
+            font-weight: bold;
+        }
+        &__col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            span {
+                display: block;
+                color: white;
+                font-size: clamp(0.7rem, 1rem, 1.5rem);
+                white-space: nowrap;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            @include makeit(640px) {
+                flex-direction: column-reverse;
+                span {
+                    font-size: clamp(3vw, 3.5vw, 4vw);
+                }
+            }
+        }
+        &__col-mid{
+            margin:auto 0rem;
+            span{
+                display: block;
+                font-size:clamp(2rem , 2.5rem, 3rem);
+                text-align: center;
+                
+            }
+            button{
+                margin-top:1rem;
+                width: 100%;
+                padding: 0.5rem 2rem;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                white-space:nowrap;
+                text-transform: inherit;
+                color: $dark-text;
+                font-weight: 550;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+            @include makeit(644px){
+                span{
+                    font-size:1.5rem;
+                }button{
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+        @include circle(auto){
+            
+        };
     }
 }
 .placeholder {
+    position: relative;
     padding: 1rem;
-    position:relative;
     &__img {
         background-color: rgba(20, 21, 57, 1);
         opacity: 0.4;
@@ -140,23 +282,20 @@ main {
         height: 9rem;
     }
     @include makeit(463.5px) {
-        &__game-component {
+        &__img {
             width: 6.5rem;
             height: 6.5rem;
         }
     }
     @include makeit(426.5px) {
-        &__game-component {
+        &__img {
             width: 5rem;
             height: 5rem;
-            img {
-                width: 2rem;
-            }
         }
         padding: 0.8rem;
     }
     @include makeit(335.5px) {
-        &__game-component {
+        &__img {
             width: 4rem;
             height: 4rem;
         }

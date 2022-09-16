@@ -7,6 +7,103 @@
   display: flex !important;
 }
 
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes drop {
+  0% {
+    top: -80%;
+  }
+  20% {
+    top: 5%;
+  }
+  25% {
+    top: 10%;
+  }
+  50% {
+    top: 15%;
+  }
+  75% {
+    top: 20%;
+  }
+  100% {
+    top: 25%;
+  }
+}
+@keyframes drop {
+  0% {
+    top: -80%;
+  }
+  20% {
+    top: 5%;
+  }
+  25% {
+    top: 10%;
+  }
+  50% {
+    top: 15%;
+  }
+  75% {
+    top: 20%;
+  }
+  100% {
+    top: 25%;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: scale(0.2) rotate(180deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(90deg);
+  }
+  75% {
+    transform: scale(0.8) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: scale(0.2) rotate(180deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(90deg);
+  }
+  75% {
+    transform: scale(0.8) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -23,6 +120,73 @@ body {
   font-family: Barlow Semi Condensed;
   background: radial-gradient(circle, rgb(31, 55, 86) 13%, rgb(20, 21, 57) 100%);
   background-repeat: no-repeat;
+}
+
+.overlay-backdrop {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 10;
+}
+
+.modal {
+  background-color: white;
+  position: absolute;
+  z-index: 20;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1.5rem;
+  top: -25rem;
+  bottom: auto;
+  right: 0%;
+  left: 0%;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-animation-name: drop;
+          animation-name: drop;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.modal__header {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.modal__header h2 {
+  margin-right: auto;
+}
+.modal__header__img-container {
+  cursor: pointer;
+}
+.modal__header__img-container img {
+  vertical-align: middle;
+}
+.modal > img {
+  margin-top: 1rem;
+}
+@media screen and (max-width: 352px) {
+  .modal > img {
+    width: 80vw;
+  }
+}
+
+#root {
+  position: relative;
+  z-index: 5;
 }
 
 header {
@@ -107,6 +271,22 @@ main .container-step1 {
   width: 29rem;
   padding: 1rem;
   background-size: 50%;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 @media screen and (max-width: 463.5px) {
   main .container-step1 {
@@ -395,6 +575,28 @@ main .container-step2__col span {
   }
 }
 main .container-step2 .scissors {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   background: linear-gradient(hsl(39deg, 89%, 49%), hsl(40deg, 84%, 53%));
   padding: 1rem;
   border-radius: 100%;
@@ -445,6 +647,28 @@ main .container-step2 .scissors__game-component img {
   }
 }
 main .container-step2 .paper {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
   padding: 1rem;
   border-radius: 100%;
@@ -495,6 +719,28 @@ main .container-step2 .paper__game-component img {
   }
 }
 main .container-step2 .rock {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
   padding: 1rem;
   border-radius: 100%;
@@ -545,6 +791,28 @@ main .container-step2 .rock__game-component img {
   }
 }
 main .container-step2 .lizard {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
   padding: 1rem;
   border-radius: 100%;
@@ -595,6 +863,28 @@ main .container-step2 .lizard__game-component img {
   }
 }
 main .container-step2 .spock {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  -webkit-animation-name: scaling;
+          animation-name: scaling;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
   background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
   padding: 1rem;
   border-radius: 100%;
@@ -644,10 +934,322 @@ main .container-step2 .spock__game-component img {
     height: 4rem;
   }
 }
+main .container-step3 {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+main .container-step3 span {
+  font-weight: bold;
+}
+main .container-step3__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main .container-step3__col span {
+  display: block;
+  color: white;
+  font-size: 1rem;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  main .container-step3__col {
+    flex-direction: column-reverse;
+  }
+  main .container-step3__col span {
+    font-size: 3.5vw;
+  }
+}
+main .container-step3__col-mid {
+  margin: auto 0rem;
+}
+main .container-step3__col-mid span {
+  display: block;
+  font-size: 2.5rem;
+  text-align: center;
+}
+main .container-step3__col-mid button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  text-transform: inherit;
+  color: hsl(229deg, 25%, 31%);
+  font-weight: 550;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+@media screen and (max-width: 644px) {
+  main .container-step3__col-mid span {
+    font-size: 1.5rem;
+  }
+  main .container-step3__col-mid button {
+    padding: 0.5rem 1rem;
+  }
+}
+main .container-step3 .scissors {
+  background: linear-gradient(hsl(39deg, 89%, 49%), hsl(40deg, 84%, 53%));
+  padding: 1rem;
+  border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+main .container-step3 .scissors__game-component {
+  background-color: white;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: auto;
+}
+main .container-step3 .scissors__game-component img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3 .scissors__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step3 .scissors {
+    padding: 0.8rem;
+  }
+  main .container-step3 .scissors__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step3 .scissors__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step3 .scissors {
+    padding: 0.7rem;
+  }
+  main .container-step3 .scissors__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+main .container-step3 .paper {
+  background: linear-gradient(hsl(230deg, 89%, 62%), hsl(230deg, 89%, 65%));
+  padding: 1rem;
+  border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+main .container-step3 .paper__game-component {
+  background-color: white;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: auto;
+}
+main .container-step3 .paper__game-component img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3 .paper__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step3 .paper {
+    padding: 0.8rem;
+  }
+  main .container-step3 .paper__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step3 .paper__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step3 .paper {
+    padding: 0.7rem;
+  }
+  main .container-step3 .paper__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+main .container-step3 .rock {
+  background: linear-gradient(hsl(349deg, 71%, 52%), hsl(349deg, 70%, 56%));
+  padding: 1rem;
+  border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+main .container-step3 .rock__game-component {
+  background-color: white;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: auto;
+}
+main .container-step3 .rock__game-component img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3 .rock__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step3 .rock {
+    padding: 0.8rem;
+  }
+  main .container-step3 .rock__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step3 .rock__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step3 .rock {
+    padding: 0.7rem;
+  }
+  main .container-step3 .rock__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+main .container-step3 .lizard {
+  background: linear-gradient(hsl(261deg, 73%, 60%), hsl(261deg, 72%, 63%));
+  padding: 1rem;
+  border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+main .container-step3 .lizard__game-component {
+  background-color: white;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: auto;
+}
+main .container-step3 .lizard__game-component img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3 .lizard__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step3 .lizard {
+    padding: 0.8rem;
+  }
+  main .container-step3 .lizard__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step3 .lizard__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step3 .lizard {
+    padding: 0.7rem;
+  }
+  main .container-step3 .lizard__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+main .container-step3 .spock {
+  background: linear-gradient(hsl(189deg, 59%, 53%), hsl(189deg, 58%, 57%));
+  padding: 1rem;
+  border-radius: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+main .container-step3 .spock__game-component {
+  background-color: white;
+  border-radius: 100%;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: auto;
+}
+main .container-step3 .spock__game-component img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3 .spock__game-component {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+}
+@media screen and (max-width: 426.5px) {
+  main .container-step3 .spock {
+    padding: 0.8rem;
+  }
+  main .container-step3 .spock__game-component {
+    width: 5rem;
+    height: 5rem;
+  }
+  main .container-step3 .spock__game-component img {
+    width: 2rem;
+  }
+}
+@media screen and (max-width: 335.5px) {
+  main .container-step3 .spock {
+    padding: 0.7rem;
+  }
+  main .container-step3 .spock__game-component {
+    width: 4rem;
+    height: 4rem;
+  }
+}
 
 .placeholder {
-  padding: 1rem;
   position: relative;
+  padding: 1rem;
 }
 .placeholder__img {
   background-color: rgb(20, 21, 57);
@@ -657,7 +1259,7 @@ main .container-step2 .spock__game-component img {
   height: 9rem;
 }
 @media screen and (max-width: 463.5px) {
-  .placeholder__game-component {
+  .placeholder__img {
     width: 6.5rem;
     height: 6.5rem;
   }
@@ -666,19 +1268,16 @@ main .container-step2 .spock__game-component img {
   .placeholder {
     padding: 0.8rem;
   }
-  .placeholder__game-component {
+  .placeholder__img {
     width: 5rem;
     height: 5rem;
-  }
-  .placeholder__game-component img {
-    width: 2rem;
   }
 }
 @media screen and (max-width: 335.5px) {
   .placeholder {
     padding: 0.7rem;
   }
-  .placeholder__game-component {
+  .placeholder__img {
     width: 4rem;
     height: 4rem;
   }

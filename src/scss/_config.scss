@@ -28,6 +28,7 @@ $font-barlow: Barlow Semi Condensed;
 @mixin circle($cursor-type) {
     @each $class, $color in $border-colors {
         .#{$class} {
+            @content;
             background: $color;
             padding: 1rem;
             border-radius: 100%;
@@ -78,4 +79,56 @@ $font-barlow: Barlow Semi Condensed;
 }
 .show {
     display: flex !important;
+}
+
+@keyframes scaling {
+    0% {
+        transform: scale(0.2);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes drop {
+    0% {
+        top: -80%;
+    }
+
+    20% {
+        top: 5%;
+    }
+    25% {
+        top: 10%;
+    }
+    50% {
+        top: 15%;
+    }
+    75% {
+        top: 20%;
+    }
+    100% {
+        top: 25%;
+    }
+}
+
+@keyframes rotate{
+    0% {
+        transform: scale(0.2) rotate(180deg);
+    }
+    50% {
+        transform: scale(0.6) rotate(90deg);
+    }
+    75% {
+        transform: scale(0.8) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }

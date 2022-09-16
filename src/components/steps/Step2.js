@@ -1,14 +1,22 @@
 import Circle from "../Circle";
 
-const Step2=()=>{
-    return <div className="container-step2">
+const Step2=(props)=>{
+    return <div className={`container-step2 ${props.className}`}>
         <div className="container-step2__col">
             <span>You picked</span>
-            <Circle name="rock"/>
+            <div className="placeholder">
+                <div className="placeholder__img">
+                </div>
+                <Circle name="rock" />
+            </div>
         </div>
         <div className="container-step2__col">
             <span>the house picked</span>
-            <Circle/>
+            <div className="placeholder">
+                <div className="placeholder__img">
+                </div>
+                <Circle name="rock" />
+            </div>
         </div>
     </div>
 }
