@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-
 export const context = React.createContext({
         score: 0,
         updateScore: function (num) {},
         next: 1,
-        updateNext:function(){},
+        updateNext:function(data){},
+        data:{},
     });
-
 const Provider = (props) => {   
     const [score,setScore]=useState(0);
     const [next,setNext]=useState(1);
-    const updateScore=(num)=>{
-        if(num>0){
+    const [data,setData]=useState({});
+    const updateScore=()=>{
             setScore((prevScore) => (prevScore + 1));
-        }
     };
-    const updateNext=()=>{
+    const updateNext=(data)=>{
         setNext((prevPage)=>{
             if(prevPage===3){
                 return 1;
@@ -23,6 +21,7 @@ const Provider = (props) => {
                 return (prevPage+1);
             }
         });
+        setData(data);
     }; 
     return <context.Provider
         value={{
@@ -30,6 +29,7 @@ const Provider = (props) => {
             updateNext,
             score,
             next,
+            data,
         }}>
         {props.children}
     </context.Provider>;

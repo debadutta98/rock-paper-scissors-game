@@ -1180,9 +1180,9 @@ main .container-step3__col-mid button {
   letter-spacing: 2px;
   cursor: pointer;
 }
-@media screen and (max-width: 644px) {
+@media screen and (max-width: 699.5px) {
   main .container-step3__col-mid span {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   main .container-step3__col-mid button {
     padding: 0.5rem 1rem;
@@ -1608,6 +1608,14 @@ main .container-step3 .spock__game-component img {
   }
   main .container-step3__col-mid button {
     padding: 0.5rem 2rem;
+  }
+}
+@media screen and (max-width: 463.5px) {
+  main .container-step3__col-mid span {
+    font-size: 1.8rem;
+  }
+  main .container-step3__col-mid button {
+    padding: 0.5rem 1rem;
   }
 }
 

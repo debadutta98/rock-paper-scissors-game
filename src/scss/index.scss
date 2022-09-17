@@ -258,9 +258,9 @@ main {
                 letter-spacing: 2px;
                 cursor: pointer;
             }
-            @include makeit(644px) {
+            @include makeit(699.5px) {
                 span {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
                 button {
                     padding: 0.5rem 1rem;
@@ -291,6 +291,16 @@ main {
                 }
                 button {
                     padding: 0.5rem 2rem;
+                }
+            }
+        }
+        @include makeit(463.5px){
+            &__col-mid {
+            span {
+                    font-size: 1.8rem;
+                }
+                button {
+                    padding: 0.5rem 1rem;
                 }
             }
         }
